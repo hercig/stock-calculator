@@ -1,1 +1,3 @@
-# stock-calculator
+# Stock Calculator
+
+Uses Yahoo Finance API
