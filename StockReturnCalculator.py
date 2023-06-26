@@ -31,7 +31,7 @@ class CompoundReturnCalc:
         out += "Total balance: {:.2f} USD".format(self.getTotalValue()) + "\n"
         out += "Money invested: {:.2f} USD".format(self.getInvestedMoney()) + "\n"
         out += "Dividents: {:.2f} USD".format(self.dividentPay) + "\n"
-        out += "Earnings: {:.2f} USD".format(self.getEarnings()) + "\n\n"
+        out += "Earnings: {:.2f} USD ({:.1f}%)".format(self.getEarnings(), self.getEarnings() / self.getInvestedMoney() * 100) + "\n\n"
         out += "Total earnings: {:.2f} USD".format(self.getEarnings() + self.dividentPay) + "\n"
         out += "Total networth: {:.2f} USD".format(self.getTotalValue() + self.dividentPay) + "\n"
 
@@ -110,5 +110,5 @@ class CompoundReturnCalc:
     
 
 
-googleCalc = CompoundReturnCalc("2015-12-15", "2021-12-15", "AAPL", 500)
+googleCalc = CompoundReturnCalc("2016-06-15", "2023-06-15", "AAPL", 2000)
 print(googleCalc)
